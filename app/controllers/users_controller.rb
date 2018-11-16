@@ -7,6 +7,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             flash[:success] = "Welcome, #{@user.username}"
+            redirect_to welcome_home_path
         else
             render 'new'
         end
