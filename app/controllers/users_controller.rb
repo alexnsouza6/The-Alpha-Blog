@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+    def index
+        @users = User.all
+    end
+
     def new
         @user = User.new
     end
@@ -28,7 +32,17 @@ class UsersController < ApplicationController
       end
     end
 
-
+    def show
+        @user = User.find(params[:id])
+        @user_articles = @user.articles.paginate(page: params[:page])
+    end
+    
+    def destroy
+        @user = User.find(params[:id])
+        @user.destroy
+        flash[:danger] = 'User was deleted successfully'
+        redirect_to users_path
+    end
 
     private 
     def user_params
