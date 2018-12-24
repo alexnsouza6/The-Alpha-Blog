@@ -1,0 +1,12 @@
+<h1 align="center">All Alpha Bloggers</h1>
+
+<div align="center">	
+<% @user.each do |user|%>
+    <tr>
+        <td><%= user.username%></td>
+        <td><%= link_to 'Edit User', edit_user_path(user), class: "btn btn-xs btn-primary"%></td>
+        <td><%= link_to 'Delete User', user_path(user), method: :delete, data: { confirm: 'Are you sure? '}, class: "btn btn-xs btn-danger"%>
+        </td>
+    </tr>
+    <% end %>
+</div>

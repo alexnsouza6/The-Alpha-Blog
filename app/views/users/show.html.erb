@@ -1,0 +1,8 @@
+<h1 align="center">Welcome </h1>
+<div class="row">
+	<!-- Since this is a view, any method programmer wants to use to help in a view, programmer can put it in app/helpers  -->
+	<div class="col-md-4 col-md-offset-4 center">
+		<%= gravatar_for @user, size: 150 %>
+	</div>
+</div>
+<h4 align="center"><%= @user.username %>'s articles</h4>
