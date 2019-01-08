@@ -1,0 +1,8 @@
+<h1 align="center">Edit Account</h1>
+<%= render 'form' %>
+
+<% if logged_in? && current_user.admin? %>
+    <li>
+        <%= link_to 'Delete User', user_path(user), method: :delete, data: { confirm: 'Are you sure? '} %>
+    </li>
+<% end %>

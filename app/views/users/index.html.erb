@@ -1,3 +1,4 @@
+
 <h1 align="center">All Alpha Bloggers</h1>
 
 
@@ -12,7 +13,7 @@
 					</li>
 					<% if logged_in? && current_user.admin? %>
 						<li>
-							<%= link_to 'Delete User', user_path(user), method: :delete, data: { confirm: 'Are you sure? '} %>
+							<%= link_to 'Delete User', user_path(user), class: 'btn btn-md btn-success', method: :delete, data: { confirm: 'Are you sure? '} %>
 						</li>
 					<% end %>
 				</div>	
