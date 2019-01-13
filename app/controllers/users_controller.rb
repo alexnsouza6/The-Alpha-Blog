@@ -1,9 +1,20 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
      
+=======
+    before_action :require_user, except: %i[index show]
+    before_action :require_same_user, only: %i[edit update destroy]
+    before_action :require_admin, only: :destroy
+  
+>>>>>>> 89cdc25f86f613a35396ed03c32373df662bd402
     def index
         @user = User.all
         render "index"
     end
+<<<<<<< HEAD
+=======
+
+>>>>>>> 89cdc25f86f613a35396ed03c32373df662bd402
   
     def new
       @user = User.new
@@ -28,6 +39,10 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       if @user.update(user_params)
         flash[:success] = 'Your account was successfully updated'
+<<<<<<< HEAD
+=======
+        redirect_to users_path
+>>>>>>> 89cdc25f86f613a35396ed03c32373df662bd402
       else
         render 'edit'
       end
@@ -35,7 +50,10 @@ class UsersController < ApplicationController
   
     def show
       @user = User.find(params[:id])
+<<<<<<< HEAD
       
+=======
+>>>>>>> 89cdc25f86f613a35396ed03c32373df662bd402
     end
   
     def destroy
@@ -51,6 +69,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(:username, :email, :password)
     end
   
+<<<<<<< HEAD
     def require_same_user
       if current_user != @user && !current_user.admin?
         flash[:danger] = 'You can only edit your own profile!'
@@ -66,3 +85,7 @@ class UsersController < ApplicationController
     end
   
   end
+=======
+end
+  
+>>>>>>> 89cdc25f86f613a35396ed03c32373df662bd402

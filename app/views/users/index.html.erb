@@ -1,3 +1,4 @@
+
 <h1 align="center">All Alpha Bloggers</h1>
 
 
@@ -9,9 +10,23 @@
 					<li><%=link_to gravatar_for(user), user_path(user)%></li>
 					<li class="article-title">
 						<%= link_to user.username, user_path(user) %>
+<<<<<<< HEAD
 							<%= link_to 'Delete User', user_path(user), class: 'btn btn-md btn-success', method: :delete, data: { confirm: 'Are you sure? '} %>
 					</li>
 			</div>
 		</ul>
 	<% end %>
 </div>
+=======
+					</li>
+					<% if logged_in? && current_user.admin? %>
+						<li>
+							<%= link_to 'Delete User', user_path(user), class: 'btn btn-md btn-success', method: :delete, data: { confirm: 'Are you sure? '} %>
+						</li>
+					<% end %>
+				</div>	
+			</div>
+		</ul>
+	<% end %>
+</div>
+>>>>>>> 89cdc25f86f613a35396ed03c32373df662bd402
