@@ -1,7 +1,4 @@
 class UsersController < ApplicationController
-    before_action :require_user, except: %i[index show]
-    before_action :require_same_user, only: %i[edit update destroy]
-    before_action :require_admin, only: :destroy
   
     def index
         @user = User.all

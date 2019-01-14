@@ -11,11 +11,9 @@
 					<li class="article-title">
 						<%= link_to user.username, user_path(user) %>
 					</li>
-					<% if logged_in? && current_user.admin? %>
 						<li>
 							<%= link_to 'Delete User', user_path(user), class: 'btn btn-md btn-success', method: :delete, data: { confirm: 'Are you sure? '} %>
 						</li>
-					<% end %>
 				</div>	
 			</div>
 		</ul>
