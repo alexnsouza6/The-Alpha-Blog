@@ -1,6 +1,7 @@
 <h1> The Alpha Blog </h1>
 
 <% if logged_in? %>
+    <h2> Olá, <%= current_user.username %> </h2>
     <%= link_to 'Logout', logout_path, method: :delete %>
 <% else %>
     <%= link_to 'Sign Up', signup_path %>
