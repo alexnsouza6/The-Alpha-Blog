@@ -45,7 +45,7 @@ class ArticlesController  < ApplicationController
 
     private
     def article_params
-        params.require(:article).permit(:title, :description)
+        params.require(:article).permit(:title, :description, :text).merge!({author: current_user.username})
     end
 
 end
