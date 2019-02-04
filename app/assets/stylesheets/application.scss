@@ -2,6 +2,19 @@ $navbar-default-bg:black;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+    font-size: 62.5% !important;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+// Variables
+$color-white: #fff;
+$color-black: #000000;
+$light-grey: #f4f2f2;
+
 #logo {
     float: left;
     font-size: 1.7em;
@@ -13,4 +26,178 @@ $navbar-default-bg:black;
 
 ul {
     list-style-type: none;
+}
+
+.article-container {
+    width: 100%;
+}
+
+.article-header {
+    margin: auto;
+    width: 65%;
+
+    &__create {
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            margin-right: 1rem;
+            background-color: #4db6ac;
+            color: $color-white;
+            font-weight: 600;
+            padding: .75rem 1rem;
+            border-radius: 3px;
+        }
+    }
+}
+
+.article-table {
+    margin: auto;
+    width: 65%;
+    border-radius: 3px;
+    // box-shadow: 0 2rem 4rem rgba($color-black, .15);
+
+    &__row {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #eef0f2;
+    }
+
+    &__content {
+        padding: 1rem;
+    }
+
+    &__links {
+        display: flex;
+        padding: 1rem;
+    }
+
+    &__edit {
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            margin-right: 1rem;
+            background-color: #4db6ac;
+            color: $color-white;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            border-radius: 3px;
+        } 
+    }
+
+    &__show {
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            margin-right: 1rem;
+            background-color: #0079bf;
+            color: $color-white;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            border-radius: 3px;  
+        }
+    }
+
+    &__delete {
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            margin-right: 1rem;
+            background-color: #e3413b;
+            color: $color-white;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            border-radius: 3px;   
+        }
+    }
+}
+
+.create-article {
+    margin: auto;
+    width: 65%;
+
+    &__title {
+        background-color: $light-grey;
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 5px;
+        width: 30%;
+    }
+
+    &__description {
+        background-color: $light-grey;
+        border: none;
+        padding: .7rem 2rem;
+        width: 30%;
+        border-radius: 5px;
+        resize: none;
+    }
+
+    &__text {
+        background-color: $light-grey;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        resize: none;
+        height: 30rem;
+    }
+
+    &__submit {
+        border: none;
+        text-decoration: none;
+        margin-right: 1rem;
+        background-color: #4db6ac;
+        color: $color-white;
+        font-weight: 600;
+        padding: 1rem 1.5rem;
+        border-radius: 3px;
+        margin: 1.5rem 0;  
+    }
+}
+
+.display-article {
+    margin: auto;
+    width: 65%;
+    background-color: $light-grey;
+    border-radius: 5px;
+    padding: .75rem 2rem;
+
+    &__text {
+        margin-top: 5rem;
+    }
+
+    &__author{
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+    }
+
+    &__edit {
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            margin-right: 1rem;
+            background-color: #4db6ac;
+            color: $color-white;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            border-radius: 3px;
+        }
+    }
+
+    &__back {
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            margin-right: 1rem;
+            background-color: #0079bf;
+            color: $color-white;
+            font-weight: 600;
+            padding: 1rem 1.5rem;
+            border-radius: 3px;
+        }
+    }
 }
