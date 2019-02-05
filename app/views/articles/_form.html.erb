@@ -1,0 +1,34 @@
+<% if @article.errors.any? %>
+<h2>Following errors are preventing the article from being created</h2>
+    <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ul>
+<% end %>
+
+<div class="create-article">
+    <%= form_for @article do |f| %>
+        <div>
+            <%=  f.label :title %><br>
+            <%=  f.text_field :title, :class => "create-article__title" %>
+        </div>
+
+        <div>
+            <%= f.label :description %><br>
+            <%= f.text_area :description, :class => "create-article__description" %>
+        </div>
+
+        <div>
+            <%= f.label :text %><br>
+            <%= f.text_area :text, :class => "create-article__text" %>
+        </div>
+
+        <div>
+            <%= f.submit 'Submit Article', :class => "create-article__submit" %>
+        </div>
+
+    <% end %>
+
+    <%= link_to "Back to articles listing", articles_path %>
+</div>
